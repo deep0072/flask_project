@@ -7,16 +7,16 @@ app = Flask(__name__)
 def Content(): 
     with open('file1.txt', 'r') as f: 
         text = f.read()
-        print(text)
+       
         return render_template('content.html', text=text)
 
 
-        
+
 @app.route('/file2') 
 def Content2(): 
     with open('file2.txt', 'r') as f: 
         text = f.read()
-        print(text)
+       
         return render_template('content.html', text=text)
 
 
@@ -25,14 +25,14 @@ def Content2():
 def Content3(): 
     with open('file3.txt', 'r') as f: 
         text = f.read()
-        print(text)
+       
         return render_template('content.html', text=text)
 
 @app.route('/file4') 
 def Content4(): 
     with open('file4.txt', errors="ignore") as f: 
         text = f.read()
-        print(text)
+       
         return render_template('content.html', text=text)
 
 app.run(debug = False)
