@@ -12,24 +12,11 @@ def Content(id):
         text = f1.readlines()
         full_text = f2.read()
 
-        # for text in text:
-        #     if id in text[0:2]:
-        #         print(text[0:2])
-        #         print(True)
-        #         text = text
-        #
-        #
-        final_text = ""
-        print(id[0], id[len(id) - 1])
-        for line_number, text in enumerate(text):
-
-            if line_number == int(id[0]):
-                final_text.append(text)
-
-            if line_number == int(id[len(id) - 1]):
-                final_text.append(text)
-
-        text = final_text
+        for text in text:
+            if id in text[0:4]:
+                print(True)
+                text = text
+                break
 
     return render_template("content.html", text=text)
 
