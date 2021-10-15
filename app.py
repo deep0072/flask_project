@@ -9,12 +9,17 @@ def Content():
         text = f.read()
         print(text)
         return render_template('content.html', text=text)
+
+
+        
 @app.route('/file2') 
 def Content2(): 
     with open('file2.txt', 'r') as f: 
         text = f.read()
         print(text)
         return render_template('content.html', text=text)
+
+
 
 @app.route('/file3') 
 def Content3(): 
@@ -30,4 +35,4 @@ def Content4():
         print(text)
         return render_template('content.html', text=text)
 
-app.run()
+app.run(debug = False)
